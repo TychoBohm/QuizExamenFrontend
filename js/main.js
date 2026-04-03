@@ -23,7 +23,7 @@ window.onload = function () {
             } else {
                 // Opslaan van naam en doorgaan naar het themascherm
                 sessionStorage.setItem("playername", playerName);
-                window.location.href = "../pages/themascherm.html";
+                window.location.href = "pages/themascherm.html";
             }
         };
     }
@@ -42,7 +42,7 @@ window.onload = function () {
         button.onclick = function () {
             const theme = this.innerText; // Haal het geselecteerde thema op
             sessionStorage.setItem("theme", theme); // Sla het thema op in sessionStorage
-            window.location.href = "../pages/quizscherm.html"; // Ga naar het quizscherm
+            window.location.href = "quizscherm.html"; // Ga naar het quizscherm
         };
     });
 
@@ -102,7 +102,7 @@ function loadNextQuestion() {
         // Opslaan van antwoorden en navigeren naar eindscherm
         sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
         sessionStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
-        window.location.href = "../pages/eindscherm.html";
+        window.location.href = "eindscherm.html";
         return;
     }
 
